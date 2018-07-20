@@ -22,5 +22,10 @@ app.post("/api/login", (req, res) => {
   }
 });
 
+app.get("/loggedIn/admin", (req, res, next) => {
+  console.log(req.session)
+  res.sendStatus(200)
+})
+
 const port = 3010;
 app.listen(port, () => console.log(`Magic Happens on Port:${port}`));
